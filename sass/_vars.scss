@@ -1,0 +1,32 @@
+$bright-blue: hsl(220, 98%, 61%);
+$check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+$check-background-g: linear-gradient(321deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+$radius: 0.275rem;
+// light mode
+$very-light-gray: hsl(0, 0%, 98%); //el bg
+$very-light-grayish-blue: hsl(236, 33%, 92%); //bg
+$light-grayish-blue: hsl(0, 0%, 76%); //tx th
+$dark-grayish-blue: hsl(236, 9%, 61%); //tx md
+$very-dark-grayish-blue: hsl(235, 19%, 35%); //tx mn
+// dark mode
+$very-dark-blue: hsl(235, 21%, 11%); //bg
+$very-dark-desaturated-blue: hsl(235, 24%, 19%); //el bg
+$light-grayish-blue: hsl(234, 39%, 85%);
+$light-grayish-blue-hover: hsl(240, 3%, 79%); //tx mn
+$dark-grayish-blue: hsl(234, 11%, 52%); // tx md
+$very-dark-grayish-blue-1: hsl(233, 14%, 35%); //tx th
+$very-dark-grayish-blue-2: hsl(237, 14%, 26%);
+// used theme vars (light)
+$background: $very-light-grayish-blue;
+$eleement-background: $very-light-gray;
+$text-mid: $dark-grayish-blue;
+$text-main: $very-dark-grayish-blue;
+$text-thin: $light-grayish-blue;
+//
+:root {
+  --background: #{$very-light-grayish-blue};
+  --element-background: #{$very-light-gray};
+  --text-thin: #{$light-grayish-blue};
+  --text-mid: #{$dark-grayish-blue};
+  --text-main: #{$very-dark-grayish-blue};
+}

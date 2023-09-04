@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo app</title>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <main>
+      <section>
+        <header>
+          <h1>TODO</h1>
+          <button class="" id="theme-toggle-button">
+          </button>
+        </header>
+        <form class="checked" id="task-input">
+          <button class="check checked" type="submit"></button>
+          <input name="title"  placeholder="create a new todo" type="text" />
+        </form>
+        <ul id="task-list">
+          <li id="0203" draggable="true" class="" data-task-order="1">
+            <button class="check"></button>
+            <span>some text here 1</span>
+            <button class="cross"></button>
+          </li>
+          <li id="072538" draggable="true" class="checked" data-task-order="2">
+            <button class="check"></button>
+            <span>some text here 2</span>
+            <button class="cross"></button>
+          </li>
+          <li id="2934" draggable="true" class="" data-task-order="3">
+            <button class="check"></button>
+            <span>some text here 3</span>
+            <button class="cross"></button>
+          </li>
+        </ul>
+        <div class="controls">
+          <span id="left-items">left items: 29</span>
+          <div id="filter-group" class="filter-buttons">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="incompleted">Active</button>
+            <button data-filter="completed">Completed</button>
+          </div>
+          <button id="clear-completed">clear completed</button>
+        </div>
+        <footer>Drag and drop to reorder list</footer>
+      </section>
+    </main>
+    <script src="./javascript/main.js" type="module"></script>
+  </body>
+</html>

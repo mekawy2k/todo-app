@@ -1,0 +1,46 @@
+form {
+  height: 3rem;
+  background: var(--element-background);
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  border-radius: $radius;
+  color: $text-mid;
+  & input[type="text"] {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    height: 100%;
+    font-size: inherit;
+    color: inherit;
+    &::placeholder {
+      color: inherit;
+      font-size: 0.8rem;
+    }
+  }
+}
+button.check {
+  width: 1.625rem;
+  height: 1.625rem;
+  margin-inline: 0.6rem;
+  border: none;
+  border: 0.125rem solid var(--text-thin);
+  border-radius: 100%;
+  background: transparent;
+  position: relative;
+}
+.checked button.check {
+  background-image: $check-background-g;
+  &::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    inset: 0;
+    background: url(../assets/images/icon-check.svg);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+  }
+}

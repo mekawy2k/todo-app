@@ -1,0 +1,33 @@
+.bg {
+  background: var(--background);
+  inset: 0;
+  position: fixed;
+  z-index: -1;
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+:root[data-theme="dark"] {
+  .bg::after {
+    background-image: url(../assets/images/bg-mobile-dark.jpg);
+    @include sm {
+      background-image: url(../assets/images/bg-desktop-dark.jpg);
+    }
+  }
+}
+:root[data-theme="light"] {
+  .bg::after {
+    background-image: url(../assets/images/bg-mobile-light.jpg);
+    @include sm {
+      background-image: url(../assets/images/bg-desktop-light.jpg);
+    }
+  }
+}
+

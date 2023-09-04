@@ -1,0 +1,66 @@
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+);
+
+// Mixins for screens greater than or equal to the breakpoint
+@mixin sm {
+  @media (min-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+// Mixins for screens smaller than the breakpoint
+@mixin sm-down {
+  @media (max-width: map-get($breakpoints, "sm" - 1)) {
+    @content;
+  }
+}
+
+@mixin md-down {
+  @media (max-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin lg-down {
+  @media (max-width: map-get($breakpoints, "lg" - 1)) {
+    @content;
+  }
+}
+
+@mixin xl-down {
+  @media (max-width: map-get($breakpoints, "xl" - 1)) {
+    @content;
+  }
+}
+@mixin dark {
+  :root[data-theme="dark"] {
+    @content;
+  }
+}
+@mixin dark {
+  :root[data-theme="light"] {
+    @content;
+  }
+}
