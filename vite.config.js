@@ -1,5 +1,5 @@
-export default {
-    build: {
-      base: '/todo-app/'
-    }
-  }
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  base: '/easybank/'
+})
